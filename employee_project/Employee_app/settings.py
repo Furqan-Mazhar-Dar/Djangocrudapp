@@ -55,7 +55,7 @@ ROOT_URLCONF = 'Employee_app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [r'C:\Users\Furqan Dar\Desktop\Employee_app\employee_register\templetes'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
