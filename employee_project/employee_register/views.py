@@ -4,7 +4,8 @@ from .models import employee
 
 # Create your views here.
 def employee_list(request):
-    return render(request,"employee_register/employee_list.html")
+    context = {'employee_list': employee.objects.all()}
+    return render(request, "employee_register/employee_list.html", context)
 
 def employee_form(request):
     if request.method == "GET":
@@ -18,7 +19,7 @@ def employee_form(request):
         if id == 0:
             form = employeeform(request.POST)
         else:
-            employee = employee.objects.get(pk=id)
+            employee =employee.objects.get(pk=id)
             form = employeeform(request.POST, instance=employee)
         if form.is_valid():
             form.save()
