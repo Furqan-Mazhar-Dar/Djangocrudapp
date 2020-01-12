@@ -1,7 +1,7 @@
-from django.urls import path,include
+from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('employee',views.employee_form),
+    path('',views.employee_form),
     path('list/',views.employee_list),
 ]
